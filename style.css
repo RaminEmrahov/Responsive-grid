@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;    
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: 'left-section right-section';
+}
+
+.left-section {
+    grid-area: left-section;
+    display: grid; 
+    grid-template-rows: 14vh 70vh calc(100% - 84vh);  
+    grid-template-columns: repeat(3, 100%);
+    
+    grid-template-areas: 'header'
+                         'main'
+                         'footer';
+}
+
+.right-section {
+  grid-area: right-section;
+  background-image: url("images/business-img.jpeg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+}
+
+header {
+    grid-area: header;
+    
+}       
+
+header img {
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+    width: 14rem;
+}
+
+header .languages {
+    position: absolute;
+    top: 5%;
+    right: 62%;   
+}
+
+.languages span {
+    font-size: 1.3rem;  
+    margin-right: 1.8rem; 
+    color: #A0AEC0;
+    font-weight: 500;
+}
+
+.languages span:first-child{
+     color: #1A202C;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    justify-content: center;
+    align-content: center;  
+    gap: 30px;
+    
+}
+
+main h1 {
+    color: #2D3748;    
+    padding: 30px 0; 
+    font-size: 3rem;
+    margin-right: 12rem;
+}
+
+main h1 span  {
+    color: #A0AEC0;
+}
+
+form label {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.input-group {
+    width: 100%;
+    border: 1px solid #CBD5E0;
+    border-radius: 0.6rem;
+    margin: 7px 0 15px;
+}
+
+.input-group label {
+    background-color: #CBD5E0;
+    padding: 9px 16px;
+    outline: none;
+}
+
+.input-group input {
+    outline: none;
+    border: none;
+    width: 80%;
+    padding: 8px 16px;
+    font-size: 1.6rem;
+}
+
+.id-user  {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.id-user input {
+    width: 100%;
+    padding: 8px 16px;
+    outline: none;
+    border: none;
+    border: 1px solid #E2E8F0;
+    border-radius: 0.6rem;
+    font-size: 1.6rem;
+    margin: 6px 0 12px;
+}
+
+.inputBox1 input {
+    background-color: #CBD5E0;
+    border: none;
+    width: 100%;
+    padding: 10px 24px;
+    border-radius: 0.6rem;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    opacity: 40%;
+}
+
+p {
+    font-size: 1.6rem;
+    color: #4A5568;
+    width: 95%;
+    text-align: center;
+    padding: 15px 0 15px 20px;
+    margin: 12px 0;
+
+}
+
+.inputBox2 input {
+    background-color: #FFFFFF;
+    font-weight: 600;
+    width: 100%;
+    padding: 10px 24px;
+    border: 1px solid #E2E8F0;
+    border-radius: 0.6rem;
+    text-align: center;
+    color: #1A202C;
+    cursor: pointer;
+}
+
+footer {
+    grid-area: footer;
+    position: relative;
+}
+
+footer img {
+    width: 8rem;
+    position: absolute;
+    bottom: 2.2rem;
+    left: 6rem;
+}
+
+footer a {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 6rem;
+    border-bottom: 1px solid #718096;
+    line-height: 2rem;
+    color: #718096;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .right-section {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        grid-template-rows: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'left-section';
+    }
+    
+    header .languages {
+        position: absolute;
+        top: 5%;
+        right: 3%;   
+    }
+    
+    }
+
+    @media screen and (min-width: 576px) and (max-width: 768px) {
+        .right-section {
+            display: none;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-rows: 100vh;
+            grid-template-columns: 100%;
+            grid-template-areas: 'left-section';
+        }
+
+        header .languages {
+            position: absolute;
+            top: 5%;
+            right: 3%;   
+        }
+
+        main h1 {
+            padding: 10px 0;
+            font-size: 2.5rem;
+            margin-right: 8rem;
+        }
+
+        header img {
+            width: 11rem;
+        }
+        }
